@@ -2,3 +2,5 @@ node_modules
 cdmd_dist
 pnpm-lock.yaml
 package-lock.json
+.idea/
+.direnv/

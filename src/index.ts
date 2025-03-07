@@ -6,7 +6,7 @@ type WorkspaceFile = {
 }
 
 export async function workflow({ files }: Api) {
-  console.error("Hello, world!");
+  console.log("Hello, world!");
   const workspaceFiles = files("pnpm-workspace.yaml").yaml();
   const packages = await workspaceFiles
       .map(async (doc) => {
@@ -14,11 +14,7 @@ export async function workflow({ files }: Api) {
         return contents["packages"];
       });
 
-  console.error(packages);
+  console.log(packages);
 
-  // await files("**/*.ts")
-  //   .jsFam()
-  //   .astGrep("console.log($A)")
-  //   .replace("console.error($A)");
 }
 
